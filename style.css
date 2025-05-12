@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(167, 255, 167);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-image: linear-gradient(red,blue,blue,red);
+}
+header img{
+    width: 100px;
+}
+header h1{
+    font-size: 50px;
+}
+
+footer{
+    margin: 5%;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 10px;
+}
+.buttons>.status{
+    font-size: 30px;
+    font-weight: bold;
+}
+.start>button{
+    font-size: 40px;
+    background-image: linear-gradient(lime,red);
+    padding: 7px 30px;
+    border: none;
+    border-radius: 30px;
+}
+.board{
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    width: 520px;
+    height: 520px;
+    display: grid;
+    grid-template-columns: 160px 160px 160px;
+    grid-template-rows: 160px 160px 160px;
+    gap: 20px;
+    background-image: linear-gradient(0.125turn,rgb(82, 47, 47),rgb(76, 2, 2),rgb(237, 0, 0),purple,rgb(1, 1, 208),rgb(11, 3, 54),black);
+}
+.cell{
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 5px;
+}
+.cell>img{
+    width: 100%;
+}
+.line{
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+.l1{
+    height: 5%;
+    width: 0;
+    background-color: yellow;
+    top: 14%;
+    left: 5%;
+    border-radius: 15px;
+}
+.l3{
+    height: 5%;
+    width: 0;
+    background-color: yellow;
+    bottom: 14%;
+    left: 5%;
+    border-radius: 15px;
+}
+.l2{
+    height: 5%;
+    width: 0;
+    background-color: yellow;
+    top: 48%;
+    left: 5%;
+    border-radius: 15px;
+}
+.l4{
+    height: 0;
+    width: 5%;
+    background-color: yellow;
+    top: 5%;
+    left: 14%;
+    border-radius: 15px;
+}
+.l5{
+    height: 0;
+    width: 5%;
+    background-color: yellow;
+    top: 5%;
+    left: 48%;
+    border-radius: 15px;
+}
+.l6{
+    height: 0;
+    width: 5%;
+    background-color: yellow;
+    top: 5%;
+    right: 14%;
+    border-radius: 15px;
+}
+.line7{
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+.line8{
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}
+.l7{
+    background-color: yellow;
+    height: 5%;
+    width: 120%;
+    border-radius: 15px;
+    transform: rotate(0.125turn);
+    top: 48%;
+    left: -10%;
+}
+.l8{
+    background-color: yellow;
+    height: 5%;
+    width: 120%;
+    border-radius: 15px;
+    transform: rotate(0.375turn);
+    top: 48%;
+    left: -10%;
+}
+
+@media screen and (max-width: 800px) {
+    .board{
+        width: 400px;
+        height: 400px;
+        grid-template-columns: 120px 120px 120px;
+        grid-template-rows: 120px 120px 120px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .board{
+        width: 330px;
+        height: 330px;
+        gap: 15px;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+    }
+    header h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .board{
+        width: 270px;
+        height: 270px;
+        grid-template-columns: 80px 80px 80px;
+        grid-template-rows: 80px 80px 80px;
+    }
+    .buttons button{
+        font-size: 30px;
+    }
+    header img{
+        width: 80px;
+    }
+}
